@@ -31,7 +31,7 @@ class CommandGoToFile
     case TextMate.current_line
 
       # Example: render :partial => 'account/login'
-      when /render[\s\(].*:partial\s*=>\s*['"](.+?)['"]/
+      when /render[\s\(].*[:partial\s*=>]?\s*['"](.+?)['"]/
         partial_name = $1
         modules = current_file.modules + [current_file.controller_name]
 
