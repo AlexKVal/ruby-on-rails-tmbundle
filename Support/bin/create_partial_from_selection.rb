@@ -18,86 +18,29 @@ unless current_file.file_type == :view
 end
 
 # If text is selected, create a partial out of it
-if TextMate.selected_text
-  ext = ".html.#{current_file.extension}"
-  partial_name = TextMate::UI.request_string(
-    :title => "Create a partial from the selected text", 
-    :default => "partial",
-    :prompt => "Name of the new partial: (omit the _ and #{ext})",
-    :button1 => 'Create'
-  )
+ext = ".html.#{current_file.extension}"
 
-  if partial_name
-    path = current_file.dirname
-    partial = File.join(path, "_#{partial_name}#{ext}")
+partial_name = TextMate.selected_text || TextMate.current_word
 
-    # Create the partial file
-    if File.exist?(partial)
-      unless TextMate::UI.request_confirmation(
-        :button1 => "Overwrite",
-        :button2 => "Cancel",
-        :title => "The partial file already exists.",
-        :prompt => "Do you want to overwrite it?"
-      )
-        TextMate.exit_discard
-      end
+if partial_name
+  path = current_file.dirname
+  partial = File.join(path, "_#{partial_name}#{ext}")
+
+  # Create the partial file
+  if File.exist?(partial)
+    unless TextMate::UI.request_confirmation(
+      :button1 => "Overwrite",
+      :button2 => "Cancel",
+      :title => "The partial file already exists.",
+      :prompt => "Do you want to overwrite it?"
+    )
+      TextMate.exit_discard
     end
-    
-    # determine and strip identing of the partial
-    selected_text = TextMate.selected_text + "" # somehow .clone did not work
-    identing = selected_text.split("\n").first.to_s.match(/^(\s+)/) ? $1 : ""
-    selected_text.gsub!(/^#{identing}/, "")
-    
-    file = File.open(partial, "w") { |f| f.write(selected_text) }
-    TextMate.rescan_project
-
-    # Return the new render :partial line
-    if current_file.extension == "haml"
-      print "#{identing}= render :partial => '#{partial_name}'\n"
-    else
-      print "#{identing}<%= render :partial => '#{partial_name}' %>\n"
-    end
-  else
-    TextMate.exit_discard
   end
+  
+  file = File.open(partial, "w")
+  TextMate.rescan_project
+  TextMate.open partial
 else
-  # Otherwise, toggle inline partials if they exist
-
-  text = ""
-  partial_block_re =
-    /<!--\s*\[\[\s*Partial\s'(.+?)'\sBegin\s*\]\]\s*-->\n(.+)<!--\s*\[\[\s*Partial\s'\1'\sEnd\s*\]\]\s*-->\n/m
-
-  # Inline partials exist?
-  if current_file.buffer =~ partial_block_re
-    text = current_file.buffer.text
-    while text =~ partial_block_re
-      partial_name, partial_text = $1, $2
-      File.open(partial_name, "w") { |f| f.write $2 }
-      text.sub! partial_block_re, ''
-    end
-  else
-  # See if there are any render :partial statements to expand
-    current_file.buffer.lines.each_with_index do |line, i|
-      text << line
-      if line =~ /render[\s\(].*:partial\s*=>\s*['"](.+?)['"]/
-        partial_name = $1
-        modules = current_file.modules + [current_file.controller_name]
-
-        # Check for absolute path to partial file
-        if partial_name.include?('/')
-          pieces = partial_name.split('/')
-          partial_name = pieces.pop
-          modules = pieces
-        end
-
-        partial = File.join(current_file.rails_root, 'app', 'views', modules, "_#{partial_name}.html.erb")
-
-        text << "<!-- [[ Partial '#{partial}' Begin ]] -->\n"
-        text << IO.read(partial).gsub("\r\n", "\n")
-        text << "<!-- [[ Partial '#{partial}' End ]] -->\n"
-      end
-    end
-  end
-  print text
-  TextMate.exit_replace_document
+  TextMate.exit_discard
 end
