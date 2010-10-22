@@ -21,6 +21,7 @@ end
 ext = ".html.#{current_file.extension}"
 
 partial_name = TextMate.selected_text || TextMate.current_word
+partial_name.gsub(/[^a-z0-9]+/i, '_') 
 
 if partial_name
   path = current_file.dirname
