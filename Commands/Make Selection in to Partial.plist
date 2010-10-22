@@ -9,9 +9,9 @@
 "${TM_RUBY:=ruby}" -- "${TM_BUNDLE_SUPPORT}/bin/create_partial_from_selection.rb"
 </string>
 	<key>fallbackInput</key>
-	<string>word</string>
+	<string>scope</string>
 	<key>input</key>
-	<string>document</string>
+	<string>selection</string>
 	<key>keyEquivalent</key>
 	<string>^~@</string>
 	<key>name</key>
