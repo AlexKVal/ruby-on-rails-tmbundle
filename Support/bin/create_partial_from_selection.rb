@@ -26,16 +26,10 @@ if partial_name
   path = current_file.dirname
   partial = File.join(path, "_#{partial_name}#{ext}")
 
-  # Create the partial file
+  # Go to the partial if it already exists
   if File.exist?(partial)
-    unless TextMate::UI.request_confirmation(
-      :button1 => "Overwrite",
-      :button2 => "Cancel",
-      :title => "The partial file already exists.",
-      :prompt => "Do you want to overwrite it?"
-    )
-      TextMate.exit_discard
-    end
+    TextMate.open partial
+    TextMate.exit_discard
   end
   
   file = File.open(partial, "w")
