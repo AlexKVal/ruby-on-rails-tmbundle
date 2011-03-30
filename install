@@ -1,0 +1,25 @@
+#! /usr/bin/env bash
+
+BUNDLES_DIR="$HOME/Library/Application Support/TextMate/Bundles"
+
+BUNDLE_SOURCE=$(cd $(dirname "$0") && pwd)
+BUNDLE_DEST="$BUNDLES_DIR/Ruby on Rails.tmbundle"
+
+function error(){
+	echo "`basename $0`: error: $1"
+	exit 1
+}
+
+if [ -h "$BUNDLE_DEST" ]; then
+	if [[ `readlink "$BUNDLE_DEST"` != "$BUNDLE_SOURCE" ]]; then
+		error "$BUNDLE_DEST is already linked to something else"
+	fi
+else
+	ln -s -f "$BUNDLE_SOURCE" "$BUNDLE_DEST" || error "Error creating link"
+fi
+
+osascript -e 'tell app "TextMate" to reload bundles' || error "Error reloading bundles"
+
+gem list --local --no-versions | grep -q '^git$' || error "Install git gem: sudo gem install git"
+
+echo "Done."
