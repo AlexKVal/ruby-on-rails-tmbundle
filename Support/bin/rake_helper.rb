@@ -81,9 +81,6 @@ command = "#{command} 2>&1" if task =~ /^test/
 output = `#{command}`
 lines = output.split("\n")
 
-# Remove the test output from rake output
-lines.pop if lines[-1] =~ /0 tests, 0 assertions, 0 failures, 0 errors/
-
 report = ""
 
 case task
@@ -122,6 +119,8 @@ when /^test/
         next
       when /^(\d+) tests, (\d+) assertions, (\d+) failures, (\d+) errors/
         tests, assertions, failures, errors = [$1, $2, $3, $4].map &:to_i
+        next if tests + assertions + failures + errors == 0
+        
         color = (errors + failures == 0) ? 'green' : 'red'
         line = "<span style='font-weight:bold; color:#{color}'>#{line}</span>"
     end
