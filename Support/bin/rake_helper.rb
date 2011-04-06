@@ -114,6 +114,7 @@ when "db:migrate", "migrate"
   report << "</table>" if inside_table
 when /^test/
   lines.each do |line|
+    line = line.gsub('<', '&lt;').gsub('>', '&gt;')
     case line
       when /rake_test_loader/
         next
