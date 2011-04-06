@@ -76,7 +76,7 @@ HTML
 
 $stdout.flush
 
-command = "#{command} 2>&1 | sed -n '/Started/,//p'" if task =~ /^test/
+command = "#{command} 2>&1" if task =~ /^test/
 
 output = `#{command}`
 lines = output.split("\n")
@@ -118,6 +118,8 @@ when "db:migrate", "migrate"
 when /^test/
   lines.each do |line|
     case line
+      when /rake_test_loader/
+        next
       when /^(\d+) tests, (\d+) assertions, (\d+) failures, (\d+) errors/
         tests, assertions, failures, errors = [$1, $2, $3, $4].map &:to_i
         color = (errors + failures == 0) ? 'green' : 'red'
