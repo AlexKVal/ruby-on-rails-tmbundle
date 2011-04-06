@@ -115,6 +115,16 @@ when "db:migrate", "migrate"
     report << line
   end
   report << "</table>" if inside_table
+when /^test/
+  lines.each do |line|
+    case line
+      when /^(\d+) tests, (\d+) assertions, (\d+) failures, (\d+) errors/
+        tests, assertions, failures, errors = [$1, $2, $3, $4].map &:to_i
+        color = (errors + failures == 0) ? 'green' : 'red'
+        line = "<span style='font-weight:bold; color:#{color}'>#{line}</span>"
+    end
+    report << line << "<br>"    
+  end
 else
   report += lines.join("<br>")
 end
