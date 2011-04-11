@@ -14,7 +14,7 @@ TextMate.call_with_progress(:title => "Contacting database", :message => "Fetchi
     exit
   end
 
-  klass = word.camelcase.singularize.constantize rescue nil
+  klass = word.camelcase.pluralize.singularize.constantize rescue nil
   if klass and klass.class == Class and klass.ancestors.include?(ActiveRecord::Base)
     columns = klass.columns_hash
 
