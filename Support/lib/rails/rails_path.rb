@@ -5,10 +5,10 @@
 # Description:
 #   Makes analyzing of a Rails path + filename easier.
 
-require 'rails/misc'
-require 'rails/text_mate'
-require 'rails/buffer'
-require 'rails/inflector'
+require File.join(File.dirname(__FILE__), %w[misc])
+require File.join(File.dirname(__FILE__), %w[text_mate])
+require File.join(File.dirname(__FILE__), %w[buffer])
+require File.join(File.dirname(__FILE__), %w[inflector])
 require 'fileutils'
 
 module AssociationMessages
@@ -136,6 +136,29 @@ class RailsPath
       return nil unless File.directory?(File.join(TextMate.project_directory, root_indicator))
     end
     return TextMate.project_directory
+  end
+
+  def find_rails_root(path)
+    return path if rails_root?(path)
+    
+    #test top level first
+    Dir.glob(File.join(path, '*')).each do |subpath|
+      return subpath if rails_root?(subpath)
+    end
+    
+    Dir.glob(File.join(path, '*')).each do |subpath|
+      Dir.glob(File.join(subpath, '*')).each do |children_of_subpath|
+        out = find_rails_root(children_of_subpath)
+        return out unless out.nil?        
+      end
+    end
+    
+    return nil
+  end
+
+  def rails_root?(path)
+    return true if File.exists?(File.join(path, 'app')) and File.exists?(File.join(path, 'app', 'controllers')) and File.exists?(File.join(path, 'app', 'models'))
+    return false
   end
 
   # This is used in :file_type and :rails_path_for_view

@@ -3,13 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
+<<<<<<< HEAD
 	<string>default_scope ${1:order(${2:'${3:created_at DESC}'})}</string>
+=======
+	<string>default_scope ${3::${1:order} =&gt; ${2:'created_at DESC'}}$0</string>
+>>>>>>> phuibonhoa/master
 	<key>name</key>
 	<string>default_scope</string>
 	<key>scope</key>
 	<string>meta.rails.model</string>
 	<key>tabTrigger</key>
+<<<<<<< HEAD
 	<string>dscope</string>
+=======
+	<string>ds</string>
+>>>>>>> phuibonhoa/master
 	<key>uuid</key>
 	<string>83B80B60-6143-4465-B064-0DA25DDDCAA7</string>
 </dict>
