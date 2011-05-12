@@ -1,3 +1,8 @@
+== TODO - TechnoGate ==
+
+- Integrate the project with Jeweler
+- Completely remove the old Rakefile
+
 == TODO - From Dr Nic ==
 
 - Call Generate Script - dynamically load generator names (bin/generate.rb)
