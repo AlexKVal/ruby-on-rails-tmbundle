@@ -1,0 +1,1578 @@
+2011-05-12  Wael Nasreddine <wael.nasreddine@gmail.com>
+
+  * README.md: Personalise the README (more details coming later.
+
+2011-04-11  John Gibb <johngibb@gmail.com>
+
+  * Support/bin/show_schema.rb: bug with singularize doesn't work right if the
+  input isn't already plural.  example: address.singularize = addres
+
+2011-04-06  John Gibb <johngibb@gmail.com>
+
+  * Support/bin/rake_helper.rb: html encode < and >
+
+  * Support/bin/rake_helper.rb: better place to remove 0 results line
+
+  * Support/bin/rake_helper.rb: redirect stderr to stdout and filter out first
+  line indicating which library is loaded
+
+  * Support/bin/rake_helper.rb: color results based on failures
+
+  * Support/bin/rake_helper.rb: Remove extraneous junk before test results
+
+2011-03-29  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open Recent Migrations.tmCommand: Updated recent migrations to
+  show the last 50
+
+2011-03-29  John Gibb <johngibb@gmail.com>
+
+  * Support/lib/rails/rails_path.rb: add support for slim
+
+  * install: add install command
+
+2011-03-28  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open Recent Migrations.tmCommand: Added filename / version to
+  output of recent migrations
+
+  * .../delete singular_path(id) [DESTROY].tmSnippet: Fixed rest delete snippet
+
+2011-03-21  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Updated language to recognize share_setup
+
+2011-03-15  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_methods.rb: Fixed list methods so it properly handles
+  changed calls
+
+2011-03-12  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * README.md, Support/bin/list_methods.rb: Added ability for list_methods to
+  autocomplete a partially formed method name (it will still pop up a search
+  text field if you enter the command at the end of an class/variable, but now
+  you can do something like model.meth ⌥⌘+␣  and it will list all
+  instance methods on model that match 'meth')
+
+  * Commands/Open Recent Migrations.tmCommand: Updated open migrations to
+  gracefully handle the case where the timestamp of a migration file name is
+  corrupted
+
+  * Support/lib/rails/command_go_to_file.rb: Replaced default test file created
+  by goto file to just require test helper rather than assume test helper is up
+  1 level
+
+2011-02-28  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_methods.rb: Updated list_methods to prompt for class and
+  not dynamically clone the cache for misses.
+
+2011-02-24  dhoelzgen <daniel.hoelzgen@me.com>
+
+  * Support/lib/rails/generate.rb: Updated auto-detection of generators for
+  Rails 3
+
+  * Support/bin/generate.rb, Support/lib/rails_bundle_tools.rb: Changed the way
+  rails is called
+
+  * Support/bin/generate.rb, Support/lib/rails_bundle_tools.rb: Changed
+  generator commands to support Rails 3
+
+2011-02-21  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Updated for shared_should version 0.6
+
+2011-02-15  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_methods.rb: Updated list_methods to write to a temp file
+  first in case there is an error it will not corrupt the cache
+
+2011-02-14  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Fixed language to handle shoulda context /
+  should lines with a comment at the end
+
+2011-02-11  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * README.md: Updated readme
+
+2011-02-10  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_factories.rb: Updated list factories to support factory
+  definitions without parentheses and to seach any file in text/factories and
+  spec/factories
+
+2011-02-09  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Added new shared should keywords
+
+2011-02-08  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/List columns of a model.tmCommand: Changed shortcut of list
+  methods command to be ⌥⌘+␣
+
+2011-02-03  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/get :on => :member.tmSnippet, Snippets/get.tmSnippet, info.plist:
+  Improved get snippet.
+
+2011-02-01  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/move column after.tmSnippet: Updated move column after snippet
+
+2011-02-01  Matthew Lehner <matthewlehner@gmail.com>
+
+  * Support/bin/create_partial_from_selection.rb: Fixed bug caused by invalid
+  chars in create_partial_from_selection.rb line 17
+
+2011-01-28  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/caches_action.tmSnippet, Snippets/get.tmSnippet,
+  Snippets/respond_to.tmSnippet, Support/lib/rvm/change_rvm,
+  Support/lib/rvm/rvm.rb, Support/lib/rvm/rvm_textmate, info.plist: Fix bug
+  with RVM support and added some new snippets.
+
+2011-01-27  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * README.md: Updated readme
+
+  * .../Convert move column in migration.tmCommand, Snippets/move column
+  after.tmSnippet, Support/bin/migration_helpers.rb, info.plist: Added move
+  column snippet and command
+
+2011-01-24  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/validates_acceptance_of (menu).tmSnippet,
+  Snippets/validates_associated (menu).tmSnippet, .../validates_confirmation_of
+  (menu).tmSnippet, Snippets/validates_exclusion_of (menu).tmSnippet,
+  Snippets/validates_format_of (menu).tmSnippet,
+  Snippets/validates_inclusion_of (menu).tmSnippet,
+  Snippets/validates_inclusion_of.tmSnippet, Snippets/validates_length_of
+  (menu).tmSnippet, .../validates_numericality_of (menu).tmSnippet,
+  Snippets/validates_presence_of (menu).tmSnippet,
+  Snippets/validates_uniqueness_of (menu).tmSnippet, info.plist: Added
+  validation menu with v⇥
+
+2011-01-12  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/each_with_object.tmSnippet, info.plist: Added each_with_object
+  snippet
+
+  * Syntaxes/Ruby on Rails.plist: Updated rails language to make 'returning' a
+  keyword.  While it's not actually a keyword, it helps to have returning
+  treated the same as return by textmate themes
+
+2011-01-05  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/lib/search_utilities.rb: Updated searching capabilities to try the
+  reverse order split off _ and ' '
+
+2010-12-23  vann <vann@innerfusion.net>
+
+  * Commands/Make Selection in to Partial.plist: add make selection into
+  partial
+
+2010-05-22  Justin Perkins <justinperkins@gmail.com>
+
+  * Support/lib/rails/command_go_to_file.rb: add go_to_file support for the
+  shorthand partial syntax
+
+2010-12-22  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Convert to assert_equal.tmCommand, Commands/Convert to
+  update_attributes!.tmCommand, info.plist: Added / updated command to convert
+  variable = value into assert_equal value, variable, and
+  variable.update_attributes!(:variable => value)
+
+2010-12-08  Dylan Markow <dm@petefowler.com>
+
+  * Syntaxes/Ruby on Rails.plist: Add 'validates' as valid syntax in
+  support.function.activerecord.rails
+
+2010-12-01  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Convert to update_attributes!.tmCommand, Snippets/Test Assert
+  Response (are).plist, info.plist: Removed puts @response.body from
+  assert_response and added convert to update_attributes! command
+
+2010-11-29  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_methods.rb: Updated list methods to show class/instance
+  you are search methods against
+
+  * Commands/Open Recent Migrations.tmCommand: Updated recent migrations to
+  show 20 migrations
+
+2010-11-22  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_methods.rb: Updated list methods to differenciate between
+  class and instance methods
+
+2010-11-18  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Fixed language for parameterized shared
+  shoulds
+
+2010-11-17  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Updated for new shared name
+
+  * Syntaxes/Ruby on Rails.plist: Updated language for corrected shared should
+  naming
+
+2010-11-11  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/lib/search_utilities.rb: Updated to gracefully handle the case
+  where you hit cancel on the find factory command
+
+2010-11-09  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/List columns of a model.tmCommand, Support/bin/list_methods.rb:
+  Misc fixes to list methods.  (Updated name from columns to methods and don't
+  count the matching class message in the list of valid choices)
+
+  * Support/bin/list_methods.rb: Updated cache name to be methods cache since
+  it now lists methods as well as attributes
+
+2010-11-02  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/List columns of a model.tmCommand, Support/bin/list_columns.rb,
+  Support/bin/list_methods.rb: Added methods to list_columns and renamed to
+  list_methods
+
+2010-10-28  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_columns.rb: Improved class recognition for list columns
+
+2010-10-27  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/List columns of a model.tmCommand, Snippets/within.tmSnippet,
+  Support/bin/list_columns.rb, Support/lib/search_utilities.rb, info.plist:
+  Improved sorting of list commands and added within snippet
+
+2010-10-26  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_factories.rb: Auto fill in with 1 result in list factories
+
+  * Support/bin/list_columns.rb: Added class variables to list columns and
+  better handling of 0 results and 1 result
+
+  * Support/lib/search_utilities.rb: Improved search and sort to be case
+  insensitive
+
+  * Snippets/select_pairs.tmSnippet, info.plist: Added select_pairs snippet
+
+2010-10-25  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Support/bin/list_columns.rb, Support/lib/rails/buffer.rb,
+  Support/lib/rails/rails_path.rb, Support/lib/rails_bundle_tools.rb: Allow
+  list_column cacher to be called from a background process
+
+  * Commands/List columns of a model.tmCommand, Support/bin/list_columns.rb:
+  Fixed list columns to properly use current word from textmate
+
+  * README.md: Updated readme
+
+  * Support/bin/list_columns.rb, Support/bin/list_factories.rb,
+  Support/lib/search_utilities.rb: Added search/sorting on show columns
+
+  * Commands/List columns of a model.tmCommand, Support/bin/list_columns.rb:
+  Fixed list columns to work without the rvm requirements and to paste selected
+  attributes with a period before it
+
+  * Support/bin/list_columns.rb: Fixed list columns to work with nested model
+  files.  Files that don't map to models no longer cause the importing to crap
+  out.
+
+  * Support/bin/list_factories.rb: Updated so that list_factories checks
+  subdirectories
+
+  * Commands/List factories.tmCommand, Support/bin/list_factories.rb,
+  Support/lib/rails/rails_path.rb: Improved rails_root detection and updated
+  list_factories to gracefully handle no rails root
+
+  * Support/bin/list_factories.rb: Updated sorting of factories and cleaner
+  error handling
+
+  * README.md: Updated read me for Fac command
+
+  * Commands/List columns of a model.tmCommand, Commands/List
+  factories.tmCommand, Support/bin/list_columns.rb,
+  Support/bin/list_factories.rb, Support/bin/routes_auto_complete.rb,
+  Support/lib/Builder.rb, info.plist: Merged in some changes from the parent
+  rails bundle.  Added a list factories command
+
+2010-10-23  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/update_attributes!.tmSnippet, info.plist: Added update_attributes!
+  snippet (ua)
+
+2010-10-22  vann <vann@innerfusion.net>
+
+  * Commands/Make Selection in to Partial.plist: minor updates
+
+  * Support/bin/create_partial_from_selection.rb: add in gsub for wierd looking
+  characters
+
+  * Commands/Make Selection in to Partial.plist,
+  Support/bin/create_partial_from_selection.rb: make create partial from
+  selection even simpler
+
+  * Commands/Make Selection in to Partial.plist,
+  Support/bin/create_partial_from_selection.rb: make create from selection much
+  much more simpler
+
+2010-10-20  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Updated syntax coloring for shared should
+  definitions
+
+2010-10-12  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand, Commands/Tail
+  develoment_log.tmCommand, Commands/Tail production_log.tmCommand,
+  Commands/Tail test_log.tmCommand, Snippets/Rails_logger.tmSnippet,
+  info.plist: Updated scope of open logs to work on all scopes.  Added
+  Rails.log snippet (rlog⇥)
+
+2010-09-07  Carlos Brando <eduardobrando@gmail.com>
+
+  * README.md: README fixed.
+
+2010-08-23  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/gem.tmSnippet, Snippets/link_to_function.tmSnippet, info.plist:
+  Improved link_to_function and gem snippet.
+
+2010-08-22  Michael Sheets <git@whitefalls.org>
+
+  * info.plist: Move find_each into the menu proper.
+
+2010-08-11  robertlyc <merlinlyc@gmail.com>
+
+  * Support/bin/rake_helper.rb: fix bug for invalid multibyte char (US-ASCII)
+  in rake_helper.rb line 67
+
+2010-06-28  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/Create functional test class.tmSnippet,
+  Support/bin/list_columns.rb: Fixed autocomplete bug when model has no
+  associations. Thanks alobato (Arley Lobato). Changed Create functional test
+  snippet.
+
+2010-06-24  Carlos Brando <eduardobrando@gmail.com>
+
+  * Syntaxes/JavaScript (Rails).tmLanguage: Changed JavaScript (Rails)'s
+  pattern from source.ruby.rails.erb to source.ruby.rails.embedded.html.
+
+  * Syntaxes/JavaScript (Rails).tmLanguage: Ops, remove ','.
+
+  * Preferences/Template (ERB).tmPreferences, Syntaxes/JavaScript
+  (Rails).tmLanguage: Added jQuery to JavaScript (Rails) language syntax.
+
+  * Snippets/format (respond_with).tmSnippet, Snippets/respond_to
+  (html).tmSnippet, Snippets/respond_to.tmSnippet,
+  Snippets/respond_with.tmSnippet, Snippets/wants_format.tmSnippet, info.plist:
+  Updated respond_to and respond_with to Rails 3.
+
+  * Snippets/after_validation.tmSnippet,
+  Snippets/after_validation_on_create.tmSnippet,
+  Snippets/after_validation_on_update.tmSnippet,
+  Snippets/before_validation.tmSnippet,
+  Snippets/before_validation_on_create.tmSnippet,
+  Snippets/before_validation_on_update.tmSnippet, info.plist: Updated
+  before_validation and after_validation to Rails 3 syntax.
+
+2010-06-23  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/Test Assert Response (are).plist,
+  Snippets/assert_difference.tmSnippet, Snippets/belongs_to (bt).plist,
+  Snippets/default_scope.tmSnippet, Snippets/has_and_belongs_to_many
+  (habtm).plist, Snippets/has_many (hm).plist, Snippets/has_many
+  (through).tmSnippet, Snippets/has_many :dependent => :destroy.tmSnippet,
+  Snippets/has_one (ho).plist, Snippets/named_scope lambda.tmSnippet,
+  Snippets/named_scope.tmSnippet, Snippets/scope lambda.tmSnippet,
+  Snippets/scope with extension.tmSnippet, Snippets/scope.tmSnippet,
+  Syntaxes/Ruby on Rails.plist, info.plist: Updated named_scope to scope (Rails
+  3) and changed all associations snippets to meta.rails.model scope.
+
+2010-06-23  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * README.md: Updated readme noting mkdynamic's script
+
+2010-06-22  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/setup do__end.tmSnippet, info.plist: Added setup snippet and
+  reorganized tests menu.
+
+2010-06-16  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/bin/list_columns.rb: Refactoring code.
+
+2010-06-16  Henning Staib <henning.staib@direktzu.de>
+
+  * Support/bin/list_columns.rb: added support for namespaced/nested models
+  sort keys when choosing model
+
+2010-06-10  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/member routes.tmSnippet, Snippets/resources collection.tmSnippet,
+  Snippets/resources.tmSnippet, info.plist: Added resources, collection, and
+  member snippets.
+
+2010-06-09  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/lib/rvm/rvm.rb: Changed the way to get the current RVM version.
+
+2010-06-08  Carlos Brando <eduardobrando@gmail.com>
+
+  * Commands/List columns of a model.tmCommand, Snippets/lia.plist,
+  Snippets/liai.plist, Snippets/lic.plist, Snippets/lica.plist,
+  Snippets/licai.plist, Snippets/link_to (nested path plural).tmSnippet,
+  Snippets/link_to (nested path).tmSnippet, Snippets/link_to (path
+  plural).tmSnippet, Snippets/link_to (path).tmSnippet, Snippets/link_to
+  model.tmSnippet: Disabled to show error messages when canceling autocomplete.
+  Changed tab trigger for link_to snippets.
+
+2010-06-07  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * README.md: Updated readme typo, thanks to ryansobol for spotting the error
+
+2010-06-01  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/lib/rvm/rvm.rb: Updated to RVM 0.1.37.
+
+2010-05-31  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/lib/rvm/rvm.rb: Update for RVM 0.1.36.
+
+2010-05-28  Carlos Brando <eduardobrando@gmail.com>
+
+  * Commands/Autocomplete Routes.tmCommand,
+  Support/bin/routes_auto_complete.rb, info.plist: Autocomplete Routes. =>
+  routesrc + <tab> Does anyone have a better suggestion for the tab trigger?
+
+2010-05-27  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open Recent Migrations.tmCommand: Updated recent migrations
+  command to accept keyboard shortcuts to open links to recent migrations
+
+2010-05-28  Carlos Brando <eduardobrando@gmail.com>
+
+  * Commands/List columns of a model.tmCommand, Support/bin/list_columns.rb:
+  Remove .<tab>.
+
+2010-05-27  Carlos Brando <eduardobrando@gmail.com>
+
+  * Commands/List columns of a model.tmCommand, Commands/Set RVM.tmCommand,
+  Support/bin/list_columns.rb: Refactoring list_columns.
+
+  * Commands/Set RVM.tmCommand, Support/lib/rvm/change_rvm,
+  Support/lib/rvm/change_rvm.rb, Support/lib/rvm/check_rvm_version.rb,
+  Support/lib/rvm/choose_rvm.rb, Support/lib/rvm/rvm.rb,
+  Support/lib/rvm/rvm_textmate: Refactoring 'Set RVM...' snippet.
+
+2010-05-26  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Updated language to respect contexts with
+  single quotes
+
+2010-05-26  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/match.tmSnippet: Fix match snippet.
+
+2010-05-25  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/bin/list_columns.rb, Support/lib/rvm/check_rvm_version.rb,
+  Support/lib/rvm/choose_rvm.rb: Check if RVM isn't outdated.
+
+  * Snippets/belongs_to (bt).plist, Support/lib/rvm/choose_rvm.rb: Changed
+  belongs_to scope and fixed rvm gemsets list for rvm 0.1.33
+
+2010-05-24  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open Recent Migrations.tmCommand, README.md: Updated recent
+  migrations window to close when you click on a link
+
+  * Commands/Open Recent Migrations.tmCommand: Updated recent migrations to
+  show the last 10 migrations files (instead of 5)
+
+2010-05-23  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open Recent Migrations.tmCommand, Commands/Open
+  development_log.tmCommand, Commands/Open production_log.tmCommand,
+  Commands/Open test_log.tmCommand, info.plist: Added command that lists last 5
+  migrations with links to open them (⌥⇧+M)
+
+2010-05-21  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Tail develoment_log.tmCommand, Commands/Tail
+  production_log.tmCommand, Commands/Tail test_log.tmCommand: Updated tail log
+  commands to use tmp files rather than clipboard
+
+2010-05-21  Carlos Brando <eduardobrando@gmail.com>
+
+  * README.md: Updated README.
+
+2010-05-21  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand: Changed open log
+  command to clear and open log
+
+2010-05-20  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/bin/list_columns.rb: Improved Rails checking.
+
+  * Support/bin/list_columns.rb: be bundler aware for rails existance 
+  Conflicts:  Support/bin/list_columns.rb
+
+  * Support/bin/list_columns.rb: --author x
+
+  * Support/bin/list_columns.rb: Fixed issue #6: private method ’sub’
+  called for nil::Nilclass
+
+2010-05-19  Carlos Brando <eduardobrando@gmail.com>
+
+  * Commands/List columns of a model.tmCommand, Support/bin/list_columns.rb:
+  Thanks ramonrails: Added new activation: dot+tab for attributes autocomplete.
+
+  * Snippets/match.tmSnippet, Syntaxes/Ruby on Rails.plist, info.plist: Added
+  match snippet and adjusts meta.rails.routes for Rails 3.
+
+  * Support/bin/list_columns.rb: Added comment.
+
+  * Support/bin/list_columns.rb: Check if Rails is installed.
+
+  * Support/bin/list_columns.rb: Fixed a syntax error that prevented the column
+  list to be loaded from schema. Thanks ramonrails.
+
+  * Support/bin/list_columns.rb: Fixed Untitled window error.
+
+  * Commands/Set RVM.tmCommand, Support/lib/rvm/change_rvm.rb,
+  Support/lib/rvm/choose_rvm.rb,
+  Support/lib/rvm/nib/SetGemset.nib/designable.nib,
+  Support/lib/rvm/nib/SetGemset.nib/keyedobjects.nib,
+  Support/lib/rvm/rvm_textmate: Added "Set a new gemset..." option.
+
+2010-05-18  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/lib/rvm/change_rvm.rb, Support/lib/rvm/choose_rvm.rb,
+  Support/lib/rvm/create_gemset.sh: Added create gemset option
+
+  * Commands/Set RVM.tmCommand, Support/bin/list_columns.rb,
+  Support/lib/rails/text_mate.rb, Support/lib/rvm/choose_rvm.rb: Removed
+  ellipsis character.
+
+2010-05-17  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/bin/list_columns.rb: Update cache when set a model for an unknown
+  variable name.
+
+  * Support/bin/list_columns.rb: Accepts user and current_user, product and
+  first_product, etc.. check for underscored names.
+
+  * Support/lib/rvm/change_rvm: Remove unnecessary line.
+
+2010-05-15  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * README.md: Updated Readme
+
+  * README.md: Updated readme
+
+2010-05-15  Carlos Brando <eduardobrando@gmail.com>
+
+  * Commands/Set RVM.tmCommand, Support/lib/rvm/change_rvm,
+  Support/lib/rvm/change_rvm.rb, Support/lib/rvm/choose_rvm.rb, info.plist:
+  Added new command "Set RVM...".
+
+  * Support/bin/generate.rb, Support/bin/rake_helper.rb,
+  Support/lib/rails/text_mate.rb: Fixed some Ruby 1.9 errors. String#to_a
+  changed to #split with arguments.
+
+2010-05-14  Carlos Brando <eduardobrando@gmail.com>
+
+  * Commands/List columns of a model.tmCommand, Support/lib/rvm/choose_rvm.rb,
+  Support/lib/rvm/rvm_textmate, Support/lib/rvm_textmate: Fixed bugs when using
+  RVM.
+
+2010-05-14  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/accessible_constant.tmSnippet,
+  .../hash_indexed_by_readable_constants.tmSnippet,
+  Snippets/readable_constant.tmSnippet, Snippets/writable_constant.tmSnippet,
+  info.plist: Added constant helper snippets
+
+2010-05-14  Carlos Brando <eduardobrando@gmail.com>
+
+  * Commands/List columns of a model.tmCommand, Support/lib/rvm_textmate: If
+  .rvmrc file exists change to the right RVM config for project.
+
+  * Support/bin/list_columns.rb: Improved word method.
+
+2010-05-12  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * .../Symbol List: Factory Names.tmPreferences,
+  Snippets/redirect_to.tmSnippet, Syntaxes/Ruby on Rails.plist, info.plist:
+  Updated rails bundle to show factory names in symbol list
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand, Commands/Tail
+  develoment_log.tmCommand, Commands/Tail production_log.tmCommand,
+  Commands/Tail test_log.tmCommand: Updated log viewer commands to work in haml
+  scope
+
+2010-05-12  Carlos Brando <eduardobrando@gmail.com>
+
+  * info.plist: Reorganized menu.
+
+  * Snippets/else (ERB).tmSnippet, Snippets/gem :git.tmSnippet,
+  Snippets/gem.tmSnippet, Snippets/if (ERB).tmSnippet,
+  Support/bin/list_columns.rb, info.plist: Improved list_columns and added two
+  new bundles.
+
+2010-05-06  Carlos Brando <eduardobrando@gmail.com>
+
+  * README.md: Changed README
+
+  * Support/bin/list_columns.rb: Fixed when used in a view.
+
+2010-04-27  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/bin/list_columns.rb: Fixed error when cannot access database.
+
+  * info.plist: Changed list.
+
+2010-04-26  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/bin/list_columns.rb: Remove spaces.
+
+  * Support/bin/list_columns.rb: Remove second_time argument.
+
+  * Support/bin/go_to_file_on_current_line.rb, Support/bin/list_columns.rb:
+  Improve error system of list_columns command.
+
+  * Commands/List columns of a model.tmCommand, Support/bin/list_columns.rb:
+  Changed the way to store the database's columns in the cache.
+
+2010-04-22  Carlos Brando <eduardobrando@gmail.com>
+
+  * Support/bin/list_columns.rb: Added associations in list_columns command
+  menu.
+
+  * Commands/List columns of a model.tmCommand, Support/bin/list_columns.rb:
+  Added new command to list columns of a model.
+
+2010-04-09  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/config_gem.tmSnippet, Snippets/gem :git.tmSnippet,
+  Snippets/gem.tmSnippet, info.plist: New snippets for Bundler
+
+  * Snippets/end.tmSnippet: Remove dash of ERB tags as default.
+
+2010-03-31  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/respond_to.tmSnippet: Removed conflicting tab trigger
+
+  * Commands/Open development_log.tmCommand, Commands/Tail
+  production_log.tmCommand, Commands/Tail test_log.tmCommand: Fixed the open /
+  tail log commands
+
+2010-03-22  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Tail develoment_log.tmCommand, Commands/Tail
+  production_log.tmCommand, Commands/Tail test_log.tmCommand, info.plist: Added
+  command to tail rails logs
+
+2010-03-19  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand,
+  Snippets/logger.tmSnippet, info.plist: Added log snippet
+
+2010-03-15  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/Rails_root.tmSnippet, info.plist: Added Rails.root snippet
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand: Updated view log
+  commands shortcut key so it does not conflict
+
+2010-03-09  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand: Fixed bug in the
+  open log commands
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand: Open log commands
+  check project directory first
+
+2010-03-04  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/create plural_path [POST].tmSnippet, .../delete singular_path(id)
+  [DESTROY].tmSnippet, Snippets/edit edit_singular_path [GET].tmSnippet,
+  Snippets/index - plural_path  [GET].tmSnippet, Snippets/new 
+  new_singular_path [GET].tmSnippet, Snippets/show singular_path(id)
+  [GET].tmSnippet, Snippets/update singular_path(id) [PUT].tmSnippet,
+  info.plist: Added rest path snippets
+
+2010-03-04  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/config_gem.tmSnippet: Remove "gemcutter.org" as a source of
+  config.gem.
+
+2010-03-04  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Snippets/$LABEL.tmSnippet, Snippets/RAILS_DEFAULT_LOGGER.debug (rdb).plist,
+  Snippets/logger_debug.tmSnippet, info.plist: Change RAILS_DEFAULT_LOGGER to
+  Rails.logger, and change tab to 'deb' [fixes #12]
+
+  * Snippets/Test Assert Redirected To (art).plist, ...rt_redirected_to (nested
+  path plural).tmSnippet, .../assert_redirected_to (nested path).tmSnippet,
+  .../assert_redirected_to (path plural).tmSnippet,
+  Snippets/assert_redirected_to (path).tmSnippet: Change some tab stops for
+  assert_* snippets so they all start with 'as' tab trigger.
+
+  * Commands/Install Bundled Plugin.plist, Support/bin/list_plugins.rb,
+  Support/templates/list_plugins.rhtml: remove the 'Install Plugins' command +
+  code as it's old, uses an API which is old, and people are moving to gems and
+  not just plugins
+
+  * Commands/Install Bundled Plugin.plist, Support/bin/list_plugins.rb: Use
+  File.read to get template contents for ERB.new; instead of File.open
+
+  * Support/plugins/footnotes-edge/init.rb,
+  .../footnotes-edge/lib/textmate_backtracer.rb,
+  .../footnotes-edge/lib/textmate_footnotes.rb,
+  .../footnotes-edge/lib/textmate_initialize.rb,
+  .../templates/rescues/template_error.erb,
+  .../plugins/footnotes-edge/test/mock_controller.rb,
+  .../footnotes-edge/test/textmate_footnotes_test.rb,
+  Support/plugins/footnotes/init.rb,
+  .../plugins/footnotes/lib/textmate_backtracer.rb,
+  .../plugins/footnotes/lib/textmate_footnotes.rb,
+  .../plugins/footnotes/lib/textmate_initialize.rb,
+  .../templates/rescues/template_error.rhtml,
+  Support/plugins/footnotes/test/mock_controller.rb,
+  .../footnotes/test/textmate_footnotes_test.rb: removing plugins folder as
+  they now have a healthy happy life in own github repo
+
+  * Commands/Generate.plist, Support/lib/Builder.rb: inserting a dummy
+  Builder.rb at the top of the  to prevent the stack overflow issues; hopefully
+
+  * Support/bin/generate.rb, Support/lib/rails/generate.rb,
+  Support/test/test_generator.rb: use a generator's Usage in the 'Call Generate
+  Script' dialog
+
+  * Support/lib/rails/generate.rb, Support/test/test_generator.rb: remove some
+  unnecessary stuff
+
+  * Commands/Generate.plist, Support/bin/generate.rb,
+  Support/lib/rails/generate.rb, Support/test/test_generator.rb: Assuming the
+  infamous Builder.rb doesn't exist, 'Call Generate Script' is finding all
+  generators
+
+  * Support/test/app_fixtures/.gitignore,
+  Support/test/app_fixtures/config/boot.rb,
+  Support/test/app_fixtures/config/database.yml,
+  Support/test/app_fixtures/config/environment.rb,
+  .../config/environments/development.rb,
+  Support/test/app_fixtures/config/routes.rb, Support/test/test_generator.rb:
+  fixed test_generator tests by adding into app_fixtures more files required by
+  script/generate & rails2 apps
+
+  * Support/test/app_fixtures/script/generate: trivial change: updated fixture
+  script/generate to what is generated by rails 2.3.5
+
+  * Support/test/test_rails_path.rb: Fixed test_rails_path.rb tests by putting
+  back in expected, albeit empty, fixture folders that it tests for but were
+  lost in the transition to git (probably)
+
+  * Support/bin/create_partial_from_selection.rb: Changed != prefix to just =
+  for extracted partials in haml
+
+2010-03-01  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand: Updated open log
+  command to use full path to mate
+
+  * Snippets/default_scope.tmSnippet, Snippets/named_scope lambda.tmSnippet,
+  Snippets/named_scope.tmSnippet: Updated snippets for scopes.  named_scope
+  previous was nc changed to ns trigger
+
+2010-02-26  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/image_tag.tmSnippet: A little improvement in image_tag snippet.
+
+2010-02-27  Klaus Breyer <bannii@gmail.com>
+
+  * Snippets/image_tag.tmSnippet, info.plist: added image_tag
+
+2010-02-23  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Snippets/Test Assert Redirected To (art).plist, Snippets/Test Assert
+  Response (are).plist, Snippets/assert_difference.tmSnippet,
+  ...rt_redirected_to (nested path plural).tmSnippet, .../assert_redirected_to
+  (nested path).tmSnippet, .../assert_redirected_to (path plural).tmSnippet,
+  Snippets/assert_redirected_to (path).tmSnippet: Update asset snippets
+
+2010-02-18  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Commands/Open development_log.tmCommand, Commands/Open
+  production_log.tmCommand, Commands/Open test_log.tmCommand, info.plist: Added
+  open logs commands
+
+2010-02-10  Josh Symonds <jsymonds@backstopsolutions.com>
+
+  * Support/bin/jump_to_method_definition.rb: Fixing error where, if you're in
+  a gem, it finds methods from that gem twice
+
+2010-02-10  Tim Galeckas <timgaleckas@chromedome-lite.backstopsolutions>
+
+  * Support/lib/rails/rails_path.rb: finished a todo
+
+2010-02-10  Josh Symonds <jsymonds@backstopsolutions.com>
+
+  * Support/bin/jump_to_method_definition.rb: Even better @-variable finding
+  from views to controllers
+
+  * Support/bin/jump_to_method_definition.rb: Making the finder a class and
+  introducing better @-variable finding
+
+  * Support/bin/jump_to_method_definition.rb: Commiting in some of Tim's
+  sensible changes
+
+2010-02-10  Tim Galeckas <timgaleckas@chromedome-lite.backstopsolutions>
+
+  * Support/bin/jump_to_method_definition.rb: more corner cases and cleanup.
+  restructured the code to search for scoped module/classes in the future
+
+2010-02-10  Tim Galeckas <timgaleckas@chromedome-lite.local>
+
+  * Support/bin/jump_to_method_definition.rb: now with classes modules
+  variables and more?
+
+2010-02-09  Tim Galeckas <timgaleckas@chromedome-lite.local>
+
+  * Commands/Cucumber All.tmCommand, Commands/Cucumber OK.tmCommand,
+  info.plist: cucumber support
+
+2010-02-09  Josh Symonds <jsymonds@backstopsolutions.com>
+
+  * Support/bin/jump_to_method_definition.rb: Prettifying the find screen a
+  little bit
+
+  * Support/bin/jump_to_method_definition.rb: Removing a bit of extraneous
+  white space from returned methods
+
+  * Support/bin/jump_to_method_definition.rb: Removing rails_root from returned
+  location string since it's probably not necessary
+
+  * Support/bin/jump_to_method_definition.rb: Adding in a column summarizing
+  what we've found
+
+  * Support/bin/jump_to_method_definition.rb: Extracting regular expressions a
+  bit
+
+  * Support/bin/jump_to_method_definition.rb: Making the Ruby a bit more
+  Ruby-like
+
+  * Support/bin/jump_to_method_definition.rb: Checking for methods defined on
+  self as well
+
+  * Support/bin/jump_to_method_definition.rb: Cleaning things up a little bit
+
+  * Support/bin/jump_to_method_definition.rb: A little bit more fancy find-fu
+
+  * Support/bin/jump_to_method_definition.rb: Adding some fancy find-fu to get
+  only files we'd actually want to search
+
+  * Support/bin/jump_to_method_definition.rb: Successful pure Ruby
+  implementation
+
+2010-02-08  Josh Symonds <jsymonds@backstopsolutions.com>
+
+  * Commands/Jump to Method Definition.tmCommand,
+  Support/bin/jump_to_method_definition.rb: Making an attractive HTML window
+  popup when multiple definitions are found
+
+  * Commands/Jump to Method Definition.tmCommand,
+  Support/bin/jump_to_method_definition.rb: Adding a new find command bound to
+  control-f to automatically lookup a method
+
+2010-02-03  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Added shoulda support to functional tests
+
+  * Syntaxes/Ruby on Rails.plist: Updated rails language for better syntax
+  highlight for shoulda and support for contexts in the symbol list
+
+2010-02-02  Philippe Huibonhoa <philippe.huibonhoa@bookrenter.com>
+
+  * Syntaxes/Ruby on Rails.plist: Updated language to support shoulda
+
+2010-01-07  i0n <ianalexanderwood@gmail.com>
+
+  * README.md: removed note on ruby 1.9 migration bug as its now fixed
+
+  * ABOUT: added my name to contributors!
+
+  * Support/bin/insert_add_column_or_create_table.rb: fixed unprepend method as
+  well. Not sure where or when this method gets called but it was using to_a as
+  well which would have made it incompatible with ruby 1.9
+
+  * Support/bin/insert_add_column_or_create_table.rb,
+  Support/lib/rails/buffer.rb: squashed remove_column double tab bug
+
+  * Support/bin/intelligent_migration_snippet.rb: fixed layout of migration
+  commands, discovered bug in remove_column command when tabbing to add
+  add_column as well. Looks like it is because of the to_a method as well. Will
+  investigate
+
+  * Support/bin/intelligent_migration_snippet.rb: first working version of
+  migration bundle under 1.9 formatting could still do with some work
+
+  * Support/bin/intelligent_migration_snippet.rb: removed to_a method calls so
+  no longer errors out. doesnt work yet either though ;
+
+  * README.md: added notes to README
+
+2009-12-06  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/config_gem.tmSnippet: Improve config.gem snippet.
+
+2009-11-29  Bodaniel Jeanes and Dr Nic Williams <dev+bjeanes+drnic@mocra.com>
+
+  * Support/lib/rails/rails_path.rb: detect haml from environment.rb too
+
+2009-11-20  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/alias_attribute.tmSnippet, info.plist: Added alias_attribute
+  snippet.
+
+2009-11-12  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/layout.tmSnippet, info.plist: Added layout snippet.
+
+2009-11-11  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/before_filter.tmSnippet, info.plist: before_filter snippet.
+
+2009-11-10  Carlos Brando <eduardobrando@gmail.com>
+
+  * info.plist: Rearrange environment's snnipets.
+
+  * Snippets/config_gem.tmSnippet: Change config.gem to gemcutter.
+
+  * Snippets/config_gem.tmSnippet: Change config.gem to gemcutter.
+
+2009-09-24  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * README, README.md: starting to collect contributors in README
+
+  * Commands/Migrate to Previous Version.tmCommand: makes "Migrate to Previous
+  Version" compatible with timestamped migrations [kamk - Kamil Kukura]
+
+2009-09-16  Tobias Schwab <tobstarr@gmail.com>
+
+  * Support/lib/rails/command_go_to_file.rb: command_go_to_file: open correct
+  template when only erb version exists but project uses haml by default
+
+2009-09-15  Tobias Schwab <tobstarr@gmail.com>
+
+  * Support/bin/create_partial_from_selection.rb:
+  create_partial_from_selection: use same extension as template for partial
+  (e.g. .haml), keep identing for render line, strip prefix identing in partial
+
+2009-07-11  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Snippets/config_gem.tmSnippet, info.plist: added 'config.gem' snippet
+
+2009-06-30  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/validates_presence_of if (vpif) 2.plist: Fixed
+  "validates_presence_of if" snippet.
+
+2009-05-06  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Syntaxes/Ruby on Rails.plist: Memoize
+
+2009-04-07  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Snippets/find_each.tmSnippet, info.plist: snippet: find_each
+
+2009-04-03  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * script/txt2html, website/demo.html, website/index.html,
+  website/peepcode.html: oops, wrong tmbundle name used for download file name
+
+2009-03-21  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Syntaxes/RJS.tmLanguage: renamed RJS grammar as 'Ruby on Rails (RJS)'
+
+2009-03-19  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Rakefile, website/demo.html, website/index.html, website/peepcode.html:
+  bumped website to 2.3.0
+
+2009-03-13  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * info.plist: move 'test' snippet up near other test snippets in menu
+
+2009-03-12  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Preferences/Symbol List: Table Names.tmPreferences, Syntaxes/Ruby on
+  Rails.plist, info.plist: table names are symbols in schema.db
+
+2009-03-05  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Snippets/test do__end.tmSnippet, info.plist: added 'test do..end' as latest
+  rails-fu for testing
+
+2009-03-04  Ville Lautanala <lautis@gmail.com>
+
+  * Snippets/accepts_nested_attributes_for.tmSnippet, Snippets/f_fields_for
+  (nff).tmSnippet, Snippets/form_for fields_for.tmSnippet, info.plist: Added
+  nested model fields_for snippets (nff)
+
+  * Snippets/find_in_batches.tmSnippet, info.plist: Added find_in_batches
+  snippet (finb)
+
+2009-02-26  Ville Lautanala <lautis@gmail.com>
+
+  * Snippets/default_scope.tmSnippet, Syntaxes/Ruby on Rails.plist: Improved
+  default_scope snippet and added syntax hilighting
+
+2009-02-26  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Snippets/accepts_nested_attributes_for.tmSnippet, Syntaxes/Ruby on
+  Rails.plist, info.plist: Support for accepts_nested_attributes_for (anaf)
+
+2009-02-23  Ville Lautanala <lautis@gmail.com>
+
+  * Snippets/default_scope.tmSnippet, Snippets/scoped_by.tmSnippet, info.plist:
+  Added snippets for Rails 2.3. default_scope and dynamic scopes
+
+  * info.plist: Moved find(:last) and fields_for snippets to a more proper
+  place in menu structure
+
+  * Snippets/accepts_nested_attributes_for.tmSnippet: Added
+  accepts_nested_attributes_for snippet (Rails 2.3)
+
+2009-02-22  Ville Lautanala <lautis@gmail.com>
+
+  * Commands/Documentation for Word.tmCommand: Added APIdock documentation
+  command
+
+2009-02-13  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * website/demo.html, website/index.html, website/index.txt,
+  website/peepcode.html: updated google group url
+
+2008-08-14  Ciarán Walsh <git@ciaranwal.sh>
+
+  * Support/bin/intelligent_migration_snippet.rb: TextMate commands should
+  always use tabs for indentation; TextMate will automatically convert the
+  indentation into the user’s selected preference. 
+
+2008-12-03  jqr <elijah.miller@gmail.com>
+
+  * README: Adding install instructions, stolen from the github bundle. 
+
+2008-12-10  SizzlerWA <canuck3141-fromgithub@yahoo.com>
+
+  * Support/lib/rails/text_mate.rb: Added rescan_project method to text_mate.rb
+  to handle Shift-Ctrl-h (turn selected into partial) from view without
+  NoMethodError
+
+2008-12-02  jqr <elijah.miller@gmail.com>
+
+  * README: Adding install instructions, stolen from the github bundle.
+
+2008-09-05  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Snippets/render (partial) (rp).plist, Snippets/render (partial,collection)
+  (rpc).plist, Snippets/render (partial,locals) (rpl).plist, Snippets/render
+  (partial,object) (rpo).plist, Snippets/render (partial,status) (rps).plist,
+  info.plist: Allow render :partial to be called from html/haml
+
+  * Snippets/javascript_include_tag.tmSnippet,
+  Snippets/stylesheet_link_tag.tmSnippet: jit and slt also for haml
+
+2008-08-27  bjeanes <me@bjeanes.com>
+
+  * Snippets/Create sweeper class.tmSnippet: Made the expire_cache method have
+  some default entries for RESTful routes (because the rails documentation
+  suggests passing :controller => 'blah', :action => 'blah' etc and it doesn't
+  work so good...
+
+2008-08-19  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Snippets/stylesheet_link_tag.tmSnippet: adding missing $
+
+  * Syntaxes/Ruby on Rails.plist: fix the grammar shortcut
+
+2008-08-05  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Snippets/fields_for.tmSnippet, info.plist: fields_for (fields) snippet
+
+  * Syntaxes/Ruby on Rails.plist: added view helpers into syntax
+
+2008-07-22  Brian Landau <brianjlandau@gmail.com>
+
+  * Macros/Change Column Default.tmMacro,
+  Support/bin/intelligent_migration_snippet.rb, info.plist: Add Change Column
+  Default Macro
+
+  * Macros/Change Column.tmMacro, Support/bin/intelligent_migration_snippet.rb,
+  info.plist: Add Change Column Macro
+
+2008-07-15  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Snippets/content_for.tmSnippet, info.plist: content_for snippet for
+  templates
+
+2008-07-10  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Support/lib/rails/command_go_to_file.rb, Support/lib/rails/rails_path.rb:
+  go to file fix
+
+2008-07-03  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Support/bin/generate_quick_migration.rb: Prefix quick migration with UTC
+  timestamp rather than 001_*
+
+2008-07-01  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/redirect_to :back.tmSnippet, info.plist: Added redirect_to :back.
+
+2008-06-30  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * .../Create resources controller class.tmSnippet: minor: renamed format to
+  wants in resources controller, in line with other snippets
+
+2008-06-25  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Snippets/named_scope.tmSnippet: improve named scope snippet
+
+  * .../Create resources controller class.tmSnippet, info.plist: New snippet:
+  resources
+
+  * Snippets/Create sweeper class.tmSnippet, info.plist: Create sweeper class
+
+2008-06-24  Ryan Bigg <radarlistener@gmail.com>
+
+  * Snippets/find(%3Alast).tmSnippet: Added in the finl-> command which will do
+  the Rails 2.1 generated find(:last, ...) for you now.
+
+2008-06-19  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Support/bin/fixture_auto_complete.rb: autocomplete fixtures: correctly
+  symbolizes the fixture name: 'foo' => ':foo' and 'foo-bar' => ':"foo-bar"'
+
+2008-06-05  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Snippets/named_scope lambda.tmSnippet, Snippets/named_scope.tmSnippet:
+  slight named_scope improvement
+
+  * Snippets/named_scope lambda.tmSnippet, Snippets/named_scope.tmSnippet,
+  Syntaxes/Ruby on Rails.plist, info.plist: named_scope support
+
+2008-06-04  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Macros/Add %3A Remove Column.tmMacro, Macros/Add %3A Remove Index.tmMacro,
+  Macros/Add %3A Remove Named Index.tmMacro, .../Add %3A Remove Several Columns
+  (marcc).tmMacro, Macros/Add %3A Remove Several Columns.tmMacro, Macros/Add
+  %3A Remove Unique Index.tmMacro, Macros/Change : Change Table.tmMacro,
+  Macros/Create %3A Drop Table.tmMacro, Macros/Drop %3A Create Table.tmMacro,
+  Macros/Remove %3A Add Column.tmMacro, ...ename %3A Rename Several Columns
+  (mncc).tmMacro, Macros/Rename %3A Rename Several Columns.tmMacro,
+  Macros/Rename Column.tmMacro, Macros/Rename Table.tmMacro, Snippets/Create
+  binary column.tmSnippet, Snippets/Create boolean column.tmSnippet,
+  Snippets/Create date column.tmSnippet, Snippets/Create datetime
+  column.tmSnippet, Snippets/Create decimal column.tmSnippet, Snippets/Create
+  float column.tmSnippet, Snippets/Create integer column.tmSnippet,
+  Snippets/Create lock_version column.tmSnippet, Snippets/Create references
+  column.tmSnippet, Snippets/Create string column.tmSnippet, Snippets/Create
+  text column.tmSnippet, Snippets/Create time column.tmSnippet, Snippets/Create
+  timestamp column.tmSnippet, Snippets/Create timestamps columns.tmSnippet,
+  Snippets/Migration Drop Create Table (mdct).plist, .../Migration Remove and
+  Add Column (mrac).plist, Snippets/Table column(s) rename.tmSnippet,
+  Snippets/t_binary (tcbi).tmSnippet, Snippets/t_boolean (tcb).tmSnippet,
+  Snippets/t_date (tcda).tmSnippet, Snippets/t_datetime (tcdt).tmSnippet,
+  Snippets/t_decimal (tcd).tmSnippet, Snippets/t_float (tcf).tmSnippet,
+  Snippets/t_integer (tci).tmSnippet, Snippets/t_lock_version (tcl).tmSnippet,
+  Snippets/t_references (tcr).tmSnippet, Snippets/t_rename (tre).tmSnippet,
+  Snippets/t_string (tcs).tmSnippet, Snippets/t_text (tct).tmSnippet,
+  Snippets/t_time (tcti).tmSnippet, Snippets/t_timestamp (tcts).tmSnippet,
+  Snippets/t_timestamps (tctss).tmSnippet,
+  Support/bin/intelligent_migration_snippet.rb, Syntaxes/Ruby on Rails.plist,
+  info.plist: Started with adding change_table snippets & macros
+
+2008-06-03  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * DragCommands/Require Rails File.tmDragCommand, info.plist: Simple draggable
+  for ruby files into ruby files: creates a require statement based on common
+  known , else uses a relative path
+
+2008-05-29  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Syntaxes/Ruby on Rails.plist: removed acts_as_list and acts_as_tree from
+  syntax as they are now plugins
+
+2008-05-22  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Snippets/validates_acceptance_of if.tmSnippet,
+  Snippets/validates_acceptance_of.tmSnippet, info.plist: refined
+  validates_acceptance_of
+
+  * info.plist: moved has_many :dependent into the Validations submenu
+
+  * Snippets/validates_acceptance_of if.tmSnippet,
+  Snippets/validates_acceptance_of.tmSnippet, info.plist: added
+  validation_acceptance_of
+
+2008-06-13  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Snippets/Table column(s) change.tmSnippet, Snippets/Table column(s)
+  rename.tmSnippet, Snippets/t_change (tch).tmSnippet, Snippets/t_rename
+  (tre).tmSnippet: change & rename not in create_table
+
+2008-06-12  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/Table column(s) change.tmSnippet, Snippets/Table column(s)
+  rename.tmSnippet, Snippets/t_change (tch).tmSnippet, Snippets/t_rename
+  (tre).tmSnippet, info.plist: Added change_table#change and fix #rename.
+
+2008-06-10  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Macros/Add %3A Remove Timestamps.tmMacro, Macros/Remove %3A Add
+  Timestamps.tmMacro, Snippets/named_scope lambda.tmSnippet,
+  Support/bin/intelligent_migration_snippet.rb, info.plist: add / remove
+  timestamps
+
+2008-06-09  Carlos Brando <eduardobrando@gmail.com>
+
+  * Snippets/form_for radio_box 2.tmSnippet, Snippets/form_for
+  radio_box.tmSnippet: Not radio_box but radio_button.
+
+2008-06-05  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Snippets/named_scope lambda.tmSnippet, Snippets/named_scope.tmSnippet:
+  slight named_scope improvement
+
+  * Snippets/named_scope lambda.tmSnippet, Snippets/named_scope.tmSnippet,
+  Syntaxes/Ruby on Rails.plist, info.plist: named_scope support
+
+2008-06-04  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Macros/Add %3A Remove Column.tmMacro, Macros/Add %3A Remove Index.tmMacro,
+  Macros/Add %3A Remove Named Index.tmMacro, .../Add %3A Remove Several Columns
+  (marcc).tmMacro, Macros/Add %3A Remove Several Columns.tmMacro, Macros/Add
+  %3A Remove Unique Index.tmMacro, Macros/Change : Change Table.tmMacro,
+  Macros/Create %3A Drop Table.tmMacro, Macros/Drop %3A Create Table.tmMacro,
+  Macros/Remove %3A Add Column.tmMacro, ...ename %3A Rename Several Columns
+  (mncc).tmMacro, Macros/Rename %3A Rename Several Columns.tmMacro,
+  Macros/Rename Column.tmMacro, Macros/Rename Table.tmMacro, Snippets/Create
+  binary column.tmSnippet, Snippets/Create boolean column.tmSnippet,
+  Snippets/Create date column.tmSnippet, Snippets/Create datetime
+  column.tmSnippet, Snippets/Create decimal column.tmSnippet, Snippets/Create
+  float column.tmSnippet, Snippets/Create integer column.tmSnippet,
+  Snippets/Create lock_version column.tmSnippet, Snippets/Create references
+  column.tmSnippet, Snippets/Create string column.tmSnippet, Snippets/Create
+  text column.tmSnippet, Snippets/Create time column.tmSnippet, Snippets/Create
+  timestamp column.tmSnippet, Snippets/Create timestamps columns.tmSnippet,
+  Snippets/Migration Drop Create Table (mdct).plist, .../Migration Remove and
+  Add Column (mrac).plist, Snippets/Table column(s) rename.tmSnippet,
+  Snippets/t_binary (tcbi).tmSnippet, Snippets/t_boolean (tcb).tmSnippet,
+  Snippets/t_date (tcda).tmSnippet, Snippets/t_datetime (tcdt).tmSnippet,
+  Snippets/t_decimal (tcd).tmSnippet, Snippets/t_float (tcf).tmSnippet,
+  Snippets/t_integer (tci).tmSnippet, Snippets/t_lock_version (tcl).tmSnippet,
+  Snippets/t_references (tcr).tmSnippet, Snippets/t_rename (tre).tmSnippet,
+  Snippets/t_string (tcs).tmSnippet, Snippets/t_text (tct).tmSnippet,
+  Snippets/t_time (tcti).tmSnippet, Snippets/t_timestamp (tcts).tmSnippet,
+  Snippets/t_timestamps (tctss).tmSnippet,
+  Support/bin/intelligent_migration_snippet.rb, Syntaxes/Ruby on Rails.plist,
+  info.plist: Started with adding change_table snippets & macros
+
+2008-06-03  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * DragCommands/Require Rails File.tmDragCommand, info.plist: Simple draggable
+  for ruby files into ruby files: creates a require statement based on common
+  known , else uses a relative path
+
+2008-05-29  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Syntaxes/Ruby on Rails.plist: removed acts_as_list and acts_as_tree from
+  syntax as they are now plugins
+
+2008-05-29  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Support/bin/fixture_auto_complete.rb: fixture autocompletion maintains
+  whitespace prefix (ugh - no tests for this code)
+
+  * Support/test/buffer_test.rb, Support/test/generator_test.rb,
+  Support/test/rails_path_test.rb, Support/test/test_buffer.rb,
+  Support/test/test_generator.rb, Support/test/test_rails_path.rb,
+  Support/test/test_text_mate.rb, Support/test/text_mate_test.rb: renamed tests
+  with test_ prefix - works with autotest now
+
+2008-05-22  Lawrence Pit <lawrence.pit@gmail.com>
+
+  * Snippets/validates_acceptance_of if.tmSnippet,
+  Snippets/validates_acceptance_of.tmSnippet, info.plist: refined
+  validates_acceptance_of
+
+  * info.plist: moved has_many :dependent into the Validations submenu
+
+  * Snippets/validates_acceptance_of if.tmSnippet,
+  Snippets/validates_acceptance_of.tmSnippet, info.plist: added
+  validation_acceptance_of
+
+2008-05-22  msheets <msheets@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * info.plist: Move a loose snippet into the menu.  
+
+2008-05-13  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Snippets/has_many (hm).plist, Snippets/has_many :dependent =>
+  :destroy.tmSnippet, info.plist: has_many :dependent => :destroy (hmd)
+
+2008-05-12  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * CHANGELOG: fixed CHANGELOG spelling error [CharlieSu]
+
+2008-05-12  drnic <drnic@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Support/lib/rails/text_mate.rb: Allow "Go to File" to work on file system
+  paths containing spaces by URI escaping the file path sent to txmt://open
+  [Michael Klett]  
+
+2008-05-12  Dr Nic Williams <drnicwilliams@gmail.com>
+
+  * Support/lib/rails/text_mate.rb: Allow "Go to File" to work on file system
+  paths containing spaces by URI escaping the file path sent to txmt://open
+  [Michael Klett]
+
+2008-04-14  msheets <msheets@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Snippets/for loop in rhtml.tmSnippet, info.plist: Remove duplicate snippet.
+   
+
+  * Support/lib/rails/text_mate.rb: Remove rescan_project in favor of main
+  library version.  
+
+  * : Remove three orphan files after git merge.  
+
+2008-03-11  drnic <drnic@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Support/lib/rails/command_go_to_file.rb: go_to_alternate_file model will
+  create an ActiveRecord stub instead of a blank file  
+
+2008-03-10  msheets <msheets@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Snippets/link_to (path plural).tmSnippet: Correcting placeholder numbers.
+  Reported by Charles Roper and Lawrence Pit.  
+
+  * Preferences/Template (ERB).tmPreferences, Preferences/Template
+  (Haml).tmPreferences, ...C%= Fixtures_identify(%3Asymbol) %%3E.tmSnippet,
+  Snippets/180 rails form_tag.plist, Snippets/form_for check_box.tmSnippet,
+  Snippets/form_for checkbox.tmSnippet, Snippets/form_for file_field
+  2.tmSnippet, Snippets/form_for file_field.tmSnippet, Snippets/form_for
+  hidden_field 2.tmSnippet, Snippets/form_for hidden_field.tmSnippet,
+  Snippets/form_for label 2.tmSnippet, Snippets/form_for label.tmSnippet,
+  Snippets/form_for password_field 2.tmSnippet, Snippets/form_for
+  password_field.tmSnippet, Snippets/form_for radio_box 2.tmSnippet,
+  Snippets/form_for radio_box.tmSnippet, Snippets/form_for submit 2.tmSnippet,
+  Snippets/form_for submit.tmSnippet, Snippets/form_for text_area 2.tmSnippet,
+  Snippets/form_for text_area.tmSnippet, Snippets/form_for text_field
+  2.tmSnippet, Snippets/form_for text_field.tmSnippet, Snippets/form_for with
+  errors.tmSnippet, Snippets/form_for.tmSnippet,
+  Snippets/image_submit_tag.tmSnippet,
+  Snippets/javascript_include_tag.tmSnippet, Snippets/lia.plist,
+  Snippets/liai.plist, Snippets/lic.plist, Snippets/lica.plist,
+  Snippets/licai.plist, Snippets/link_to (nested path plural).tmSnippet,
+  Snippets/link_to (nested path).tmSnippet, Snippets/link_to (path
+  plural).tmSnippet, Snippets/link_to (path).tmSnippet, Snippets/link_to
+  model.tmSnippet, Snippets/stylesheet_link_tag.tmSnippet,
+  Snippets/submit_tag.tmSnippet: Change RAILS_TEMPLATE_* variables to have a
+  TM_ prefix to reduce potential conflicts. This is going to be added to the
+  style guide as a requirement for bundles.  
+
+  * Support/javascripts/prototype.js: Upgrade prototype.js to 1.6.0.2  
+
+  * Support/bin/create_partial_from_selection.rb, Support/bin/generate.rb,
+  Support/bin/generate_quick_migration.rb, Support/bin/list_plugins.rb,
+  Support/bin/rake_helper.rb, Support/lib/rails/command_go_to_file.rb,
+  Support/lib/rails/text_mate.rb, Support/lib/rails_bundle_tools.rb,
+  Support/test/text_mate_mock.rb: Move to the main TextMate library functions
+  where possible.  * refresh_project_drawer is now rescan_project * exit_codes
+  switched to main library. * Move almost all dialog methods away from
+  CocoaDialog to tm_dialog. * Remove unused call_with_progress  
+
+2008-03-08  duff <duff@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Snippets/assert_difference.tmSnippet,
+  Snippets/assert_no_difference.tmSnippet, Snippets/rcea.plist,
+  Snippets/rcec.plist, Snippets/rceca.plist, info.plist: • revert r9067  
+
+2008-03-08  drnic <drnic@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Snippets/assert_difference.tmSnippet,
+  Snippets/assert_no_difference.tmSnippet, Snippets/rcea.plist,
+  Snippets/rcec.plist, Snippets/rceca.plist, info.plist: Remove render
+  component snippets  
+
+2007-12-29  msheets <msheets@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Syntaxes/HTML (Rails).plist, Syntaxes/Ruby on Rails.plist: Adding .builder
+  extension to Ruby on Rails grammar, and .erb and .html.erb extensions to HTML
+  (Rails) grammar.  
+
+2007-12-17  JEG2 <JEG2@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Syntaxes/HTML (Rails).plist: Fixing the syntax for ERb tags so that they do
+  not get syntax highlighted as a minus operator by the Ruby grammar. 
+
+2007-11-27  canadaduane <canadaduane@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Snippets/Test Assert Redirected To (art).plist, Snippets/Test Assert
+  Response (are).plist, Support/bin/create_partial_from_selection.rb,
+  Support/bin/go_to_file_on_current_line.rb,
+  Support/bin/intelligent_go_to_file.rb, Support/lib/rails/rails_path.rb,
+  info.plist: Change rhtml defaults to html.erb [thanks to Nic Williams] 
+
+2007-10-30  canadaduane <canadaduane@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * .../footnotes-edge/lib/textmate_footnotes.rb: [Footnotes-edge] added
+  html.erb view file type (thanks Giles Bowkett and George Anderson) 
+
+2007-10-22  canadaduane <canadaduane@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * .../footnotes-edge/lib/textmate_footnotes.rb: Textmate Footnotes (Rails):
+  removed log info due to changes in Rails 
+
+2007-10-19  duff <duff@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Syntaxes/Ruby on Rails.plist: • use TM_FULLNAME instead of TM_USERNAME in
+  all templates and remove the setup of TM_USERNAME from the template
+  script/helper  
+
+2007-10-11  JEG2 <JEG2@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Syntaxes/Ruby on Rails.plist: Removing helper and helper_method from the
+  list of ActiveRecord macros.  They are already correctly listed in the
+  ActionPack macros. 
+
+  * Syntaxes/Ruby on Rails.plist, info.plist: Adding attr_readonly to the
+  ActiveRecord macros we recognize.  Suggested by Malesca. 
+
+2007-09-10  canadaduane <canadaduane@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * Support/lib/rails/rails_path.rb: Add support for .erb file format in
+  switching between controller/view etc. [loincloth] 
+
+2007-08-28  msheets <msheets@dfb7d73b-c2ec-0310-8fea-fb051d288c6d>
+
+  * info.plist: Completion of renaming bundle to "Ruby on Rails" to conform to
+  bundle style guide.  
+
+  * ABOUT, CHANGELOG, Commands/Clone Development DB to Test DB.tmCommand,
+  Commands/DB Schema Dump.plist, Commands/DB Schema Import.plist,
+  Commands/Generate Quick Migration.tmCommand, Commands/Generate.plist,
+  Commands/Go To Alternate File.plist, Commands/Go To File on This Line.plist,
+  Commands/Go To File.plist, Commands/Go To Functional Test.plist, Commands/Go
+  To Helper.plist, Commands/Go To Javascript.plist, Commands/Go To
+  Stylesheet.plist, Commands/Go To Unit Test.plist, Commands/Go To View.plist,
+  Commands/Install Bundled Plugin.plist, Commands/Intelligent Go To File.plist,
+  Commands/Load Fixtures (Test DB).tmCommand, Commands/Load Fixtures.tmCommand,
+  Commands/Make Selection in to Partial.plist, Commands/Migrate to Previous
+  Version.tmCommand, Commands/Rake Migrate to Version.tmCommand, Commands/Rake
+  Migrate.plist, Commands/Show DB Schema.tmCommand, LICENSE, Macros/Add :
+  Remove Column.tmMacro, Macros/Add : Remove Index.tmMacro, Macros/Add : Remove
+  Named Index.tmMacro, .../Add : Remove Several Columns (marcc).tmMacro,
+  Macros/Add : Remove Several Columns.tmMacro, Macros/Add : Remove Unique
+  Index.tmMacro, Macros/Create : Drop Table.tmMacro, Macros/Drop : Create
+  Table.tmMacro, Macros/Remove : Add Column.tmMacro, .../Rename : Rename
+  Several Columns (mncc).tmMacro, Macros/Rename : Rename Several
+  Columns.tmMacro, Macros/Rename Column.tmMacro, Macros/Rename Table.tmMacro,
+  Snippets/180 rails form_tag.plist, Snippets/Migration Add Column (mac).plist,
+  Snippets/Migration Create Column (mcc).plist, .../Migration Create Column
+  Continue (mccc).plist, Snippets/Migration Create Table (mct).plist,
+  Snippets/Migration Drop Create Table (mdct).plist, Snippets/Migration Drop
+  Table (mdt).plist, Snippets/Migration Remove Column (mrc).plist,
+  .../Migration Remove and Add Column (mrac).plist,
+  Snippets/RAILS_DEFAULT_LOGGER.debug (rdb).plist, Snippets/Rename
+  Column.tmSnippet, Snippets/Rename Table.tmSnippet, Snippets/Test Assert
+  Redirected To (art).plist, Snippets/Test Assert Response (are).plist,
+  Snippets/belongs_to (bt).plist, Snippets/has_and_belongs_to_many
+  (habtm).plist, Snippets/has_many (hm).plist, Snippets/has_one (ho).plist,
+  Snippets/lia.plist, Snippets/liai.plist, Snippets/lic.plist,
+  Snippets/lica.plist, Snippets/licai.plist, Snippets/logger_debug.tmSnippet,
+  Snippets/logger_error.tmSnippet, Snippets/logger_fatal.tmSnippet,
+  Snippets/logger_info.tmSnippet, Snippets/logger_warn.tmSnippet,
+  Snippets/map(&:sym_proc).tmSnippet, Snippets/rails flash.plist,
+  Snippets/rails params.plist, Snippets/rails session.plist,
+  Snippets/rcea.plist, Snippets/rcec.plist, Snippets/rceca.plist,
+  Snippets/rea.plist, Snippets/reai.plist, Snippets/rec.plist,
+  Snippets/reca.plist, Snippets/recai.plist, Snippets/render (action)...
+  (ra).plist, Snippets/render (action,layout) (ral).plist, Snippets/render
+  (file) (rf).plist, Snippets/render (file,use_full_path) (rfu).plist,
+  Snippets/render (inline) (ri).plist, Snippets/render (inline,locals)
+  (ril).plist, Snippets/render (inline,type) (rit).plist, Snippets/render
+  (layout) (rl).plist, Snippets/render (nothing) (rn).plist, Snippets/render
+  (nothing,status) (rns).plist, Snippets/render (partial) (rp).plist,
+  Snippets/render (partial,collection) (rpc).plist, Snippets/render
+  (partial,locals) (rpl).plist, Snippets/render (partial,object) (rpo).plist,
+  Snippets/render (partial,status) (rps).plist, Snippets/render (text)
+  (rt).plist, Snippets/render (text,layout) (rtl).plist, Snippets/render
+  (text,layout=>true) (rtlt).plist, Snippets/render (text,status) (rts).plist,
+  Snippets/validates_associated (va).plist, Snippets/validates_associated if
+  (vaif).plist, Snippets/validates_confirmation_of (vc).plist,
+  Snippets/validates_confirmation_of if (vcif).plist,
+  Snippets/validates_exclusion_of (ve).plist, Snippets/validates_exclusion_of
+  if (veif).plist, Snippets/validates_length_of (vl).plist,
+  Snippets/validates_presence_of (vp).plist, Snippets/validates_presence_of if
+  (vpif) 2.plist, Snippets/validates_uniqueness_of (vu).plist,
+  Snippets/validates_uniqueness_of if (vuif).plist, Snippets/verify
+  (verify).plist, Snippets/verify - redirect (verify).plist,
+  Support/bin/create_partial_from_selection.rb, Support/bin/generate.rb,
+  Support/bin/generate_quick_migration.rb, Support/bin/go_to_alternate_file.rb,
+  Support/bin/go_to_file_on_current_line.rb,
+  Support/bin/insert_add_column_or_create_table.rb,
+  Support/bin/intelligent_go_to_file.rb,
+  Support/bin/intelligent_migration_snippet.rb, Support/bin/list_plugins.rb,
+  Support/bin/rake_helper.rb, Support/images/home.gif,
+  Support/images/install.gif, Support/images/rails.png, Support/images/svn.png,
+  Support/javascripts/prototype.js, Support/lib/rails/buffer.rb,
+  Support/lib/rails/misc.rb, Support/lib/rails/rails_path.rb,
+  Support/lib/rails/text_mate.rb, Support/lib/rails/unobtrusive_logger.rb,
+  Support/lib/rails_bundle_tools.rb, Support/plugins/footnotes-edge/init.rb,
+  .../footnotes-edge/lib/textmate_backtracer.rb,
+  .../footnotes-edge/lib/textmate_footnotes.rb,
+  .../footnotes-edge/lib/textmate_initialize.rb,
+  .../templates/rescues/template_error.rhtml,
+  .../plugins/footnotes-edge/test/mock_controller.rb,
+  .../footnotes-edge/test/textmate_footnotes_test.rb,
+  Support/plugins/footnotes/init.rb,
+  .../plugins/footnotes/lib/textmate_backtracer.rb,
+  .../plugins/footnotes/lib/textmate_footnotes.rb,
+  .../plugins/footnotes/lib/textmate_initialize.rb,
+  .../templates/rescues/template_error.rhtml,
+  Support/plugins/footnotes/test/mock_controller.rb,
+  .../footnotes/test/textmate_footnotes_test.rb,
+  Support/templates/list_plugins.rhtml, Support/test/buffer_test.rb,
+  .../app/controllers/admin/base_controller.rb,
+  .../fixtures/app/controllers/user_controller.rb,
+  Support/test/fixtures/app/helpers/user_helper.rb,
+  Support/test/fixtures/app/models/notifier.rb,
+  Support/test/fixtures/app/models/user.rb,
+  .../app/views/notifier/forgot_password.rhtml, Support/test/misc_test.rb,
+  Support/test/rails_path_test.rb, Support/test/test_helper.rb,
+  Support/test/text_mate_mock.rb, Syntaxes/HTML (Rails).plist, Syntaxes/Ruby on
+  Rails.plist, Syntaxes/SQL (Rails).plist, TODO, info.plist: Renaming bundle to
+  "Ruby on Rails" to conform to bundle style guide.  
