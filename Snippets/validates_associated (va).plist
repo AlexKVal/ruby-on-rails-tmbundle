@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>validates_associated :${1:attribute}${2:, :on =&gt; :${3:create}}</string>
+	<string>validates_associated :${1:attribute}${2:, on: :${3:create}}</string>
 	<key>name</key>
 	<string>validates_associated</string>
 	<key>scope</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>t.decimal :${1:title}${2:${3:, :precision =&gt; ${4:10}}${5:, :scale =&gt; ${6:2}}}
+	<string>t.decimal :${1:title}${2:${3:, precision: ${4:10}}${5:, scale: ${6:2}}}
 t.$0</string>
 	<key>name</key>
 	<string>t.decimal (tcd)</string>

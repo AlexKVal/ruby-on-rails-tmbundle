@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>validates_format_of :${1:attribute}, :with =&gt; /${2:^[${3:\w\d}]+\$}/${4:, :on =&gt; :${5:create}, :message =&gt; "${6:is invalid}"}</string>
+	<string>validates_format_of :${1:attribute}, with: /${2:^[${3:\w\d}]+\$}/${4:, on: :${5:create}, message: "${6:is invalid}"}</string>
 	<key>name</key>
 	<string>validates_format_of</string>
 	<key>scope</key>

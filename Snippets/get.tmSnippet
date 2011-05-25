@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>get '${1:recent}'${2:, :on =&gt; :${3:collection}}</string>
+	<string>get '${1:recent}'${2:, on: :${3:collection}}</string>
 	<key>name</key>
-	<string>get :on =&gt; :collection</string>
+	<string>get on: :collection</string>
 	<key>scope</key>
 	<string>meta.rails.routes</string>
 	<key>tabTrigger</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>${1:plural}_path${2:(:format =&gt; ${3::xml})}$0</string>
+	<string>${1:plural}_path${2:(format: ${3::xml})}$0</string>
 	<key>name</key>
 	<string>index - plural_path  [GET]</string>
 	<key>scope</key>

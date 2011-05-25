@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :partial =&gt; "${1:item}", :status =&gt; ${2:500}</string>
+	<string>render partial: "${1:item}", status: ${2:500}</string>
 	<key>name</key>
 	<string>render (partial, status)</string>
 	<key>scope</key>

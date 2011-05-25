@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :text =&gt; "${1:text to render...}"</string>
+	<string>render text: "${1:text to render...}"</string>
 	<key>name</key>
 	<string>render (text)</string>
 	<key>scope</key>

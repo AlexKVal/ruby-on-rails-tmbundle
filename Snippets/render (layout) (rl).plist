@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :layout =&gt; "${1:layoutname}"</string>
+	<string>render layout: "${1:layoutname}"</string>
 	<key>name</key>
 	<string>render (layout)</string>
 	<key>scope</key>

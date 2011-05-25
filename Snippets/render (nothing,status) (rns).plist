@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :nothing =&gt; ${1:true}, :status =&gt; ${2:401}</string>
+	<string>render nothing: ${1:true}, status: ${2:401}</string>
 	<key>name</key>
 	<string>render (nothing, status)</string>
 	<key>scope</key>

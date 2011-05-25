@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :inline =&gt; "${1:&lt;%= 'hello' %&gt;}", :type =&gt; ${2::rxml}</string>
+	<string>render inline: "${1:&lt;%= 'hello' %&gt;}", type: ${2::rxml}</string>
 	<key>name</key>
 	<string>render (inline, type)</string>
 	<key>scope</key>

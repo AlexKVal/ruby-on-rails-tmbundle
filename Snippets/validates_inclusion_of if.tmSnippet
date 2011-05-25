@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>validates_inclusion_of :${1:attribute}${2:, :in =&gt; ${3:%w( ${4:mov avi} )}, :on =&gt; :${5:create}, :message =&gt; "${6:extension %s is not included in the list}"}, :if =&gt; proc { |obj| ${7:obj.condition?} }}</string>
+	<string>validates_inclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: "${6:extension %s is not included in the list}"}, if: proc { |obj| ${7:obj.condition?} }}</string>
 	<key>name</key>
 	<string>validates_inclusion_of if</string>
 	<key>scope</key>

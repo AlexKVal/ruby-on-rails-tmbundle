@@ -5,7 +5,7 @@
 	<key>bundlePath</key>
 	<string>/Users/tobi/Library/Application Support/TextMate/Bundles/Custom.tmbundle</string>
 	<key>content</key>
-	<string>verify :only =&gt; [:$1], :method =&gt; :post, :render =&gt; {:status =&gt; 500, :text =&gt; "use HTTP-POST"}
+	<string>verify only: [:$1], method: :post, render: {status: 500, text: "use HTTP-POST"}
 </string>
 	<key>name</key>
 	<string>verify — render</string>

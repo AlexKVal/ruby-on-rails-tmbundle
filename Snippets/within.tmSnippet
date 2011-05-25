@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>within(${1:1.day}, :of =&gt; ${2:Time.now})$0</string>
+	<string>within(${1:1.day}, of: ${2:Time.now})$0</string>
 	<key>name</key>
 	<string>within</string>
 	<key>scope</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>t.references :${1:taggable}${2:, :polymorphic =&gt; ${3:{ :default =&gt; '${4:Photo}' \}}}
+	<string>t.references :${1:taggable}${2:, polymorphic: ${3:{ default: '${4:Photo}' \}}}
 $0</string>
 	<key>name</key>
 	<string>Table column(s) references</string>

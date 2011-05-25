@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>find(:last${1:, :conditions =&gt; ['${2:${3:field} = ?}', ${5:true}]})</string>
+	<string>find(:last${1:, conditions: ['${2:${3:field} = ?}', ${5:true}]})</string>
 	<key>name</key>
 	<string>find(:last)</string>
 	<key>scope</key>

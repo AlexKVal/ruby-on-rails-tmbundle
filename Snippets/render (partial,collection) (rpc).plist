@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :partial =&gt; "${1:item}", :collection =&gt; ${2:@$1s}</string>
+	<string>render partial: "${1:item}", collection: ${2:@$1s}</string>
 	<key>name</key>
 	<string>render (partial, collection)</string>
 	<key>scope</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :inline =&gt; "${1:&lt;%= 'hello' %&gt;}", :locals =&gt; { ${2::name} =&gt; "${3:value}"$4 }</string>
+	<string>render inline: "${1:&lt;%= 'hello' %&gt;}", locals: { ${2::name} =&gt; "${3:value}"$4 }</string>
 	<key>name</key>
 	<string>render (inline, locals)</string>
 	<key>scope</key>
