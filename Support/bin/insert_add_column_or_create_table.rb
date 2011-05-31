@@ -6,7 +6,8 @@ def prepend(text, prefix)
 end
 
 def unprepend(text, prefix)
-  array_text = text.split("\n")
+  array_text = text.split("\n") if text.kind_of?(String)
+  array_text = text.to_a if text.kind_of?(Array)
   array_text.collect! {|x| x + "\n" }
   array_text.map { |line| line.index(prefix) == 0 ? line.sub(prefix, '') : line }.join
 end
