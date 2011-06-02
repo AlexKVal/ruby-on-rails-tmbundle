@@ -20,7 +20,8 @@ If you'd like to install all my bundles, check out this [script](http://gist.git
 * [drnic](https://github.com/drnic/ruby-on-rails-tmbundle)
 * [dhoelzgen](https://github.com/dhoelzgen/ruby-on-rails-tmbundle)
 * [phuibonhoa](https://github.com/phuibonhoa/ruby-on-rails-tmbundle)
-* [johngibb](https://github.com/johngibb/ruby-on-rails-tmbundle)arbarlow
+* [johngibb](https://github.com/johngibb/ruby-on-rails-tmbundle)
+* [arbarlow](https://github.com/arbarlow/ruby-on-rails-tmbundle)
 * [beausmith](https://github.com/beausmith/ruby-on-rails-tmbundle)
 * [mhenrixon](https://github.com/mhenrixon/ruby-on-rails-tmbundle)
 * [vanntastic](https://github.com/vanntastic/ruby-on-rails-tmbundle)
