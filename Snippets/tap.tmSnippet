@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>accessible_constant :${1:name}, ${2:value}$0</string>
+	<string>tap { ${2:|${1:e}|} $0 }</string>
 	<key>name</key>
-	<string>accessible_constant</string>
+	<string>tap</string>
 	<key>scope</key>
 	<string>source.ruby</string>
 	<key>tabTrigger</key>
-	<string>ac</string>
+	<string>tap</string>
 	<key>uuid</key>
-	<string>B48B1D5F-D42A-4711-A332-17B0798E1E7D</string>
+	<string>B96D9927-7D4A-4954-BA89-E22772031A74</string>
 </dict>
 </plist>
