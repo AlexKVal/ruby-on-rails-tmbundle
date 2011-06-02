@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :file =&gt; "${1:filepath}", :use_full_path =&gt; ${2:false}</string>
+	<string>render file: "${1:filepath}", use_full_path: ${2:false}</string>
 	<key>name</key>
 	<string>render (file, use_full_path)</string>
 	<key>scope</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>has_and_belongs_to_many :${1:object}${2:, :join_table =&gt; "${3:table_name}", :foreign_key =&gt; "${4:${1}_id}"}</string>
+	<string>has_and_belongs_to_many :${1:object}${2:, join_table: "${3:table_name}", foreign_key: "${4:${1}_id}"}</string>
 	<key>name</key>
 	<string>has_and_belongs_to_many</string>
 	<key>scope</key>

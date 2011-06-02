@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>xhr :delete, :${1:destroy}, :id =&gt; ${2:1}$0</string>
+	<string>xhr :delete, :${1:destroy}, id: ${2:1}$0</string>
 	<key>name</key>
 	<string>xhr delete</string>
 	<key>scope</key>

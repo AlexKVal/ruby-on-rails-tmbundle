@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>t.integer :lock_version, :null =&gt; false, :default =&gt; 0
+	<string>t.integer :lock_version, null: false, default: 0
 $0</string>
 	<key>name</key>
 	<string>Table column lock_version</string>

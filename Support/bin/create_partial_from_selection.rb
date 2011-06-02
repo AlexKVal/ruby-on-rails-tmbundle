@@ -20,22 +20,45 @@ end
 # If text is selected, create a partial out of it
 ext = ".html.#{current_file.extension}"
 
-partial_name = TextMate.selected_text || TextMate.current_word
-partial_name.gsub(/[^a-z0-9]+/i, '_') 
+partial_name = TextMate::UI.request_string(
+  :title => "Create a partial from the selected text", 
+  :default => "partial",
+  :prompt => "Name of the new partial: (omit the _ and #{ext})",
+  :button1 => 'Create'
+)
 
 if partial_name
   path = current_file.dirname
   partial = File.join(path, "_#{partial_name}#{ext}")
 
-  # Go to the partial if it already exists
+  # Create the partial file
   if File.exist?(partial)
-    TextMate.open partial
-    TextMate.exit_discard
+    unless TextMate::UI.request_confirmation(
+      :button1 => "Overwrite",
+      :button2 => "Cancel",
+      :title => "The partial file already exists.",
+      :prompt => "Do you want to overwrite it?"
+    )
+      TextMate.exit_discard
+    end
   end
   
-  file = File.open(partial, "w")
+  # determine and strip identing of the partial
+  selected_text = TextMate.selected_text + "" # somehow .clone did not work
+  identing = selected_text.split("\n").first.to_s.match(/^(\s+)/) ? $1 : ""
+  selected_text.gsub!(/^#{identing}/, "")
+  
+  file = File.open(partial, "w") { |f| f.write(selected_text) }
   TextMate.rescan_project
-  TextMate.open partial
+
+  # Return the new render :partial line
+  if current_file.extension == "haml"
+    print "#{identing}= render partial: '#{partial_name}'\n"
+  else
+    print "#{identing}<%= render partial: '#{partial_name}' %>\n"
+  end
 else
   TextMate.exit_discard
 end
+
+

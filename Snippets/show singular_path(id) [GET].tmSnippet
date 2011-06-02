@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>${1:singular}_path(${2:id}${3:, :format =&gt; ${4::xml}})$0</string>
+	<string>${1:singular}_path(${2:id}${3:, format: ${4::xml}})$0</string>
 	<key>name</key>
 	<string>show - singular_path(id)  [GET]</string>
 	<key>scope</key>

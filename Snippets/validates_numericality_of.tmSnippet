@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>validates_numericality_of :${1:attribute}${2:, :on =&gt; :${3:create}, :message =&gt; "${4:is not a number}"}</string>
+	<string>validates_numericality_of :${1:attribute}${2:, on: :${3:create}, message: "${4:is not a number}"}</string>
 	<key>name</key>
 	<string>validates_numericality_of</string>
 	<key>scope</key>

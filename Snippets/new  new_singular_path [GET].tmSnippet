@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>new_${1:singular}_path${2:(:format =&gt; ${3::xml})}$0</string>
+	<string>new_${1:singular}_path${2:(format: ${3::xml})}$0</string>
 	<key>name</key>
 	<string>new - new_singular_path  [GET]</string>
 	<key>scope</key>

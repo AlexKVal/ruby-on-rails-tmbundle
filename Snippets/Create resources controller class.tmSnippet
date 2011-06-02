@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>class ${1:Model}sController &lt; ApplicationController
-  before_filter :find_${1/./\l$0/}, :only =&gt; [:show, :edit, :update, :destroy]
+  before_filter :find_${1/./\l$0/}, only: [:show, :edit, :update, :destroy]
 
   # GET /${1/./\l$0/}s
   # GET /${1/./\l$0/}s.xml
@@ -13,7 +13,7 @@
 
     respond_to do |wants|
       wants.html # index.html.erb
-      wants.xml  { render :xml =&gt; @${1/./\l$0/}s }
+      wants.xml  { render xml: @${1/./\l$0/}s }
     end
   end
 
@@ -22,7 +22,7 @@
   def show
     respond_to do |wants|
       wants.html # show.html.erb
-      wants.xml  { render :xml =&gt; @${1/./\l$0/} }
+      wants.xml  { render xml: @${1/./\l$0/} }
     end
   end
 
@@ -33,7 +33,7 @@
 
     respond_to do |wants|
       wants.html # new.html.erb
-      wants.xml  { render :xml =&gt; @${1/./\l$0/} }
+      wants.xml  { render xml: @${1/./\l$0/} }
     end
   end
 
@@ -50,10 +50,10 @@
       if @${1/./\l$0/}.save
         flash[:notice] = '${1:Model} was successfully created.'
         wants.html { redirect_to(@${1/./\l$0/}) }
-        wants.xml  { render :xml =&gt; @${1/./\l$0/}, :status =&gt; :created, :location =&gt; @${1/./\l$0/} }
+        wants.xml  { render xml: @${1/./\l$0/}, status: :created, location: @${1/./\l$0/} }
       else
-        wants.html { render :action =&gt; "new" }
-        wants.xml  { render :xml =&gt; @${1/./\l$0/}.errors, :status =&gt; :unprocessable_entity }
+        wants.html { render action: "new" }
+        wants.xml  { render xml: @${1/./\l$0/}.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -67,8 +67,8 @@
         wants.html { redirect_to(@${1/./\l$0/}) }
         wants.xml  { head :ok }
       else
-        wants.html { render :action =&gt; "edit" }
-        wants.xml  { render :xml =&gt; @${1/./\l$0/}.errors, :status =&gt; :unprocessable_entity }
+        wants.html { render action: "edit" }
+        wants.xml  { render xml: @${1/./\l$0/}.errors, status: :unprocessable_entity }
       end
     end
   end

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>redirect_to :controller =&gt; "${1:items}"</string>
+	<string>redirect_to controller: "${1:items}"</string>
 	<key>name</key>
 	<string>redirect_to (controller)</string>
 	<key>scope</key>

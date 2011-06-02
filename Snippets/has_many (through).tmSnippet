@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>has_many :${1:objects}, :through =&gt; :${2:join_association}${3:, :source =&gt; :${4:${2}_table_foreign_key_to_${1}_table}}</string>
+	<string>has_many :${1:objects}, through: :${2:join_association}${3:, source: :${4:${2}_table_foreign_key_to_${1}_table}}</string>
 	<key>name</key>
 	<string>has_many (through)</string>
 	<key>scope</key>

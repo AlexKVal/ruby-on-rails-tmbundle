@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>t.binary :${1:title}${2:, :limit =&gt; ${3:2}.megabytes}
+	<string>t.binary :${1:title}${2:, limit: ${3:2}.megabytes}
 $0</string>
 	<key>name</key>
 	<string>Table column binary</string>

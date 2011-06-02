@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>validates_length_of :${1:attribute}, :within =&gt; ${2:3..20}${3:, :on =&gt; :${4:create}, :message =&gt; "${5:must be present}"}, :if =&gt; proc { |obj| ${6:obj.condition?} }}</string>
+	<string>validates_length_of :${1:attribute}, within: ${2:3..20}${3:, on: :${4:create}, message: "${5:must be present}"}, if: proc { |obj| ${6:obj.condition?} }}</string>
 	<key>name</key>
 	<string>validates_length_of if</string>
 	<key>scope</key>

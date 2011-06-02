@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>page.replace ${1:"${2:id}"}, :${3:partial =&gt; "${4:template}"}</string>
+	<string>page.replace ${1:"${2:id}"}, :${3partial: "${4:template}"}</string>
 	<key>name</key>
 	<string>page.replace (id, partial)</string>
 	<key>scope</key>

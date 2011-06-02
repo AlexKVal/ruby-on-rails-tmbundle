@@ -6,7 +6,8 @@ def prepend(text, prefix)
 end
 
 def unprepend(text, prefix)
-  array_text = text.split("\n")
+  array_text = text.split("\n") if text.kind_of?(String)
+  array_text = text.to_a if text.kind_of?(Array)
   array_text.collect! {|x| x + "\n" }
   array_text.map { |line| line.index(prefix) == 0 ? line.sub(prefix, '') : line }.join
 end
@@ -35,7 +36,7 @@ if self_down = buffer.find { /^(\s*)def\s+self\.down\b/ }
     if insert_text = schema.buffer.find { %r{^(\s*)create_table\s+["']#{table_name}['"]} }
       from = insert_text[0] + 1
       insert_text_indentation = insert_text[1]
-      insert_text_end = schema.buffer.find(:from => from) { %r{^#{insert_text_indentation}end\b} }
+      insert_text_end = schema.buffer.find(from: from) { %r{^#{insert_text_indentation}end\b} }
 
       # If a column is specified, get just the column, not the whole create_table
       if column_name

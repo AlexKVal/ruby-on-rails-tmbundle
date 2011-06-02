@@ -47,7 +47,7 @@ class CommandGoToFile
         TextMate.open(partial)
 
       # Example: render :action => 'login'
-      when /render[\s\(].*:action\s*=>\s*['"](.+?)['"]/
+      when /render[\s\(].*action:\s*['"](.+?)['"]/
         action = $1
         if current_file.file_type == :controller
           current_file.buffer.line_number = 0
@@ -62,8 +62,8 @@ class CommandGoToFile
       # Example: redirect_to :action => 'login'
       when /(redirect_to|redirect_back_or_default)[\s\(]/
         controller = action = nil
-        controller = $1 if TextMate.current_line =~ /.*:controller\s*=>\s*['"](.+?)['"]/
-        action = $1 if TextMate.current_line =~ /.*:action\s*=>\s*['"](.+?)['"]/
+        controller = $1 if TextMate.current_line =~ /.*controller:\s*['"](.+?)['"]/
+        action = $1 if TextMate.current_line =~ /.*action:\s*['"](.+?)['"]/
 
         unless current_file.file_type == :controller
           puts "Don't know where to go when redirecting from outside a controller"
