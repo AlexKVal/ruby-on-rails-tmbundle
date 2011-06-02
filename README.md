@@ -1,20 +1,20 @@
-#Rails TextMate Bundle
+# Rails TextMate Bundle
 
-##Description
+## Description
 
-This fork is meant to keep track of everyone's contribution in once centric
-repository. Please feel free to fork and send pull requests and I'll try to keep
-it up-to-date with all additions.
+This fork is meant to keep track of everyone's contribution to the Ruby on Rails
+textmate bundle.
+
+Please feel free to fork and send pull requests, I'll try to keep
+it up-to-date with all new commits from repositories I'm following (c.f Credits).
  
-##Installation
+## Installation
 
 1. $ `cd ~/Library/Application\ Support/TextMate/Bundles/`
-2. $ `git clone git://github.com/TechnoGate/ruby-on-rails-tmbundle.git Rails.tmbundle`
+2. $ `git clone git://github.com/TechnoGate/ruby-on-rails-tmbundle.git "Ruby on Rails.tmbundle"`
 3. $ `osascript -e 'tell app "TextMate" to reload bundles'`
 
-If you'd like to install all my bundles, check out this [script](http://gist.github.com/443129) written by [mkdynamic](http://github.com/mkdynamic).  It installs all bundles and backups any existing bundles with conflicting names.  Thanks Mark!
-
-##Credits
+## Credits
 
 * [TechnoGate](https://github.com/TechnoGate/ruby-on-rails-tmbundle)
 * [drnic](https://github.com/drnic/ruby-on-rails-tmbundle)
